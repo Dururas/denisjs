@@ -1,73 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denis Window</title>
+    <title>Denis</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+        }
+        
+        .hi {
+            margin-right: 40px;
         }
     </style>
-</head>
+</head>    
 <body>
-    <button onclick="openDenisWindow()">Open Denis Window</button>
-
-    <script>
-        function openDenisWindow() {
-            let newWindow = window.open("", "_blank", "width=500,height=400");
-
-            if (!newWindow) {
-                alert("Popup blocked! Allow pop-ups to run this script.");
-                return;
-            }
-
-            // Write HTML inside the new window
-            newWindow.document.write(`
-                <html>
-                <head>
-                    <title>Denis App</title>
-                    <style>
-                        body {
-                            font-family: Arial, sans-serif;
-                            text-align: center;
-                            margin-top: 50px;
-                            transition: background-color 0.5s;
-                        }
-                    </style>
-                </head>
-                <body>
-                    <h1 id="greeting">Hello!</h1>
-                    <h2 id="time"></h2>
-                    <script>
-                        let userName = prompt("Hello! What's your name?");
-                        if (userName) {
-                            document.getElementById("greeting").innerText = "Welcome, " + userName + "!";
-                        } else {
-                            document.getElementById("greeting").innerText = "Welcome, guest!";
-                        }
-
-                        function updateTime() {
-                            let now = new Date();
-                            document.getElementById("time").innerText = "Current Time: " + now.toLocaleTimeString();
-                        }
-                        updateTime();
-                        setInterval(updateTime, 1000);
-
-                        setInterval(() => {
-                            let colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FF9933"];
-                            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                        }, 1000);
-                    </script>
-                </body>
-                </html>
-            `);
-
-            newWindow.document.close(); // Finish loading
-        }
-    </script>
-</body>
+    <h1 class="hi">Denis</h1>
+</body>    
 </html>
-
