@@ -1,19 +1,12 @@
-// Create a label element
-let nameLabel = document.createElement("label");
-nameLabel.textContent = "Name:";
-nameLabel.setAttribute("for", "nameInput");
+document.addEventListener('DOMContentLoaded', function() {
+    let button = document.getElementById('Button');
 
-// Create an input text field
-let nameInput = document.createElement("input");
-nameInput.type = "text";
-nameInput.id = "nameInput";
-nameInput.placeholder = "Enter your name";
+let textField = document.getElementById('nameInput');
 
-// Append elements to the document body
-document.body.appendChild(nameLabel);
-document.body.appendChild(nameInput);
-
-// Optional: Log user input to the console
-nameInput.addEventListener("input", function() {
-    console.log("User typed: " + this.value);
+    if (button) {
+        button.addEventListener('click', function() {				 textField.style.display = 'none'
+            this.style.display = 'none'; // 'this' refers to the clicked button
+        });
+    }
 });
+
